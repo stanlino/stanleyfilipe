@@ -51,9 +51,11 @@
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 3rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+  color: #0070f3;
+  font-weight: bold;
 }
 
 .code {

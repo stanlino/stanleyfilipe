@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import React from 'react'
 
@@ -23,13 +22,16 @@ export function MyStacks(){
     <div className={styles.container}>
       <div className={styles.stacks}>
         {stacks.map(stack => (
-          <img 
-            key={stack.name}
-            className={styles.image} 
-            src={`${IMAGES_API}${stack.img_end_point}`} 
-            alt={`logo do ${stack.name}`} 
-            title={stack.name}
-          />
+          <div key={stack.name} className={styles.image}>
+            <Image 
+              src={`${IMAGES_API}${stack.img_end_point}`} 
+              alt={`logo do ${stack.name}`} 
+              title={stack.name}
+              width={50}
+              height={50}
+              objectFit='contain'
+            />
+          </div>
         ))} 
       </div>
       <strong>

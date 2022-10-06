@@ -3,7 +3,8 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  margin: 4rem;
+  margin: 2rem;
+  width: 100%;
 }
 
 .container strong {
@@ -16,8 +17,12 @@
   display: flex;
   flex-direction: row;
   margin: 2rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.image {
-  margin: 0 8px;
+.image_container {
+  margin: 8px;
+  width: 2.25rem;
+  height: 2.25rem;
 }

@@ -22,14 +22,16 @@ export function MyStacks(){
     <div className={styles.container}>
       <div className={styles.stacks}>
         {stacks.map(stack => (
-          <div key={stack.name} className={styles.image}>
+          <div key={stack.name} className={styles.image_container}>
             <Image 
               src={`${IMAGES_API}${stack.img_end_point}`} 
               alt={`logo do ${stack.name}`} 
               title={stack.name}
+              className={styles.image}
               width={50}
               height={50}
               objectFit='contain'
+              layout='responsive'
             />
           </div>
         ))} 

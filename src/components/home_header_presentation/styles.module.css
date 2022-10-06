@@ -1,0 +1,14 @@
+.title {
+  margin: 0 16rem;
+  line-height: 1.15;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.title strong {
+  color: #0070f3;
+}
+
+.title em {
+  color: #e67224;
+}

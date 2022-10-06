@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { HomeHeaderPresentation } from '../components/home_header_presentation'
+import { MyStacks } from '../components/my_stacks'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -16,9 +17,7 @@ const Home: NextPage = () => {
         
         <HomeHeaderPresentation />
 
-        <p className={styles.description}>
-          ReactJS, React Native, NodeJS!
-        </p>
+        <MyStacks />
 
         <div className={styles.grid}>
           <a href="https://github.com/stanlino" className={styles.card}>

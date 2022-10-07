@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-
-import styles from './styles.module.css'
+import { Container } from './styles'
 
 const stacks = [
   { name: 'Typescript', img_end_point: '/typescript/typescript-original.svg' },
@@ -19,15 +18,14 @@ const IMAGES_API = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons'
 
 export function MyStacks(){
   return (
-    <div className={styles.container}>
-      <div className={styles.stacks}>
+    <Container>
+      <div className='stacks'>
         {stacks.map(stack => (
-          <div key={stack.name} className={styles.image_container}>
+          <div key={stack.name} className='image_container'>
             <Image 
               src={`${IMAGES_API}${stack.img_end_point}`} 
               alt={`logo do ${stack.name}`} 
               title={stack.name}
-              className={styles.image}
               width={50}
               height={50}
               objectFit='contain'
@@ -36,6 +34,6 @@ export function MyStacks(){
           </div>
         ))} 
       </div>
-    </div>
+    </Container>
   )
 }

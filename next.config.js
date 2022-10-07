@@ -5,6 +5,9 @@ const nextConfig = {
   images: {
     domains: ['cdn.jsdelivr.net'],
   },
+  compiler: {
+    styledComponents: true,
+  },
 }
 
 module.exports = nextConfig

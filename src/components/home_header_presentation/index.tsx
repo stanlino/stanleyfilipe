@@ -1,11 +1,10 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect';
-
-import styles from './styles.module.css'
+import { Text } from './styles';
 
 export function HomeHeaderPresentation(){
   return (
-    <h1 className={styles.title}>
+    <Text>
       <Typewriter
         options={{
           autoStart: true,
@@ -39,6 +38,6 @@ export function HomeHeaderPresentation(){
             .start();
         }}
       />
-    </h1>
+    </Text>
   )
 }

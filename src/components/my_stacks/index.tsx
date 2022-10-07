@@ -36,9 +36,6 @@ export function MyStacks(){
           </div>
         ))} 
       </div>
-      <strong>
-        My stacks 👆
-      </strong>
     </div>
   )
 }

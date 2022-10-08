@@ -1,0 +1,17 @@
+export const stacks = [
+  { name: 'Typescript', img_end_point: '/typescript/typescript-original.svg' },
+  { name: 'NodeJs', img_end_point: '/nodejs/nodejs-original.svg' },
+  { name: 'HTML5', img_end_point: '/html5/html5-original.svg' },
+  { name: 'CSS3', img_end_point: '/css3/css3-original.svg' },
+  { name: 'Tailwindcss', img_end_point: '/tailwindcss/tailwindcss-plain.svg' },
+  { name: 'ReactJS', img_end_point: '/react/react-original.svg' },
+  { name: 'Jest', img_end_point: '/jest/jest-plain.svg' },
+  { name: 'NextJS', img_end_point: '/nextjs/nextjs-original.svg' },
+  { name: 'Android', img_end_point: '/android/android-original.svg' },
+  { name: 'Android Studio', img_end_point: '/androidstudio/androidstudio-original.svg' },
+  { name: 'Git', img_end_point: '/git/git-original.svg' },
+  { name: 'Docker', img_end_point: '/docker/docker-original.svg' },
+  { name: 'Amazon Web Services', img_end_point: '/amazonwebservices/amazonwebservices-original.svg' },
+  { name: 'Firebase', img_end_point: '/firebase/firebase-plain.svg' },
+  { name: 'Postgresql', img_end_point: '/postgresql/postgresql-original.svg' },
+]

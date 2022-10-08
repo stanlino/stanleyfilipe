@@ -8,11 +8,11 @@ export const Text = styled.h1`
   width: 100%;
 
   strong {
-    color: #0070f3;
-  }
+    :nth-child(1) {
+      color: #e67224;
+    }
 
-  em {
-    color: #e67224;
+    color: #0070f3;
   }
 
   @media (min-width: 720px) {

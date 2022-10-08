@@ -12,12 +12,10 @@ export function HomeHeaderPresentation(){
         onInit={typewriter => {
           typewriter
             .changeDelay(100)
-            .typeString('Hi ')
-            .deleteChars(1)
-            .typeString(', my name is s')
+            .typeString('Hi, my name is s')
             .pauseFor(200)
             .deleteChars(1)
-            .typeString('<em>Stanley</em>!')
+            .typeString('<strong>Stanley</strong>!')
             .pauseFor(250)
             .typeString('👋')
             .pauseFor(500)
@@ -33,7 +31,7 @@ export function HomeHeaderPresentation(){
             .deleteChars(51)
             .typeString('<strong>Javascript</strong> developer')
             .typeString('!')
-            .pauseFor(1000)
+            .pauseFor(500)
             .typeString('😅')
             .start();
         }}

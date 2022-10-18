@@ -23,7 +23,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
+    width: 10px;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.5);
   }
 `

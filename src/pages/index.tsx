@@ -7,6 +7,7 @@ import { Greetings } from '../components/greetings'
 import { Redirects } from '../components/redirects'
 import { Skills } from '../components/skills'
 import { About } from '../components/about'
+import { Diplomas } from '../components/diplomas'
 
 const Home: NextPage = () => {
   return (
@@ -27,6 +28,8 @@ const Home: NextPage = () => {
 
         <About />
         
+        <Diplomas />
+
       </main>
     </Container>
   )

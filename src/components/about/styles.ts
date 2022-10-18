@@ -29,6 +29,13 @@ export const Container = styled.article`
         text-decoration: underline;
       }
     }
+
+    span {
+      font-size: 1.5rem;
+      display: block;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
   }
 
   @media (max-width: 720px) {

@@ -18,7 +18,7 @@ export function About(){
         />
       </ImageContainer>
       <p>
-        <h3>About me</h3>
+        <span>About me</span>
         Computer technician graduated in 2020 at{' '} 
         <a href='http://www.ifto.edu.br/' target="_blank" rel="noreferrer">
           Instituto Federal do Tocantins - Campus Palmas.

@@ -2,7 +2,7 @@ import React from 'react'
 import Typewriter from 'typewriter-effect';
 import { Text } from './styles';
 
-export function HomeHeaderPresentation(){
+export function Greetings(){
   return (
     <Text>
       <Typewriter

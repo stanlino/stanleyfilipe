@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { HomeHeaderPresentation } from '../components/home_header_presentation'
+import { Greetings } from '../components/greetings'
 import { MyStacks } from '../components/my_stacks'
 import { Container, Grid, Main } from '../styles/home.styles'
 
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
       <Main>
         
-        <HomeHeaderPresentation />
+        <Greetings />
 
         <MyStacks />
 

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Greetings } from '../components/greetings'
-import { MyStacks } from '../components/my_stacks'
+import { Skills } from '../components/skills'
 import { Container, Grid, Main } from '../styles/home.styles'
 
 const Home: NextPage = () => {
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         
         <Greetings />
 
-        <MyStacks />
+        <Skills />
 
         <Grid>
           <a href="https://github.com/stanlino" className='card'>

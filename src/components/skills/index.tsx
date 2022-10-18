@@ -5,7 +5,7 @@ import { Container } from './styles'
 
 const IMAGES_API = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons'
 
-export function MyStacks(){
+export function Skills(){
   return (
     <Container>
       <div className='stacks'>

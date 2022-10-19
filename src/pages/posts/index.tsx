@@ -9,7 +9,7 @@ import { createClient } from '../../../prismicio'
 
 import {
   Main
-} from './styles'
+} from './posts.styles'
 
 type Post = {
   slug: string

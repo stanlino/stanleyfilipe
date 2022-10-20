@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { Container } from '../styles/home.styles'
+import { Container } from './home.styles'
 
 import { Greetings } from '../components/greetings'
 import { Redirects } from '../components/redirects'
 import { Skills } from '../components/skills'
 import { About } from '../components/about'
 import { Diplomas } from '../components/diplomas'
+import { LangSwitch } from '../components/atomic/lang_switch'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,10 @@ const Home: NextPage = () => {
         <meta name="description" content="Hi, my name is Stanley! I am a Javascript developer!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <nav>
+        <LangSwitch />
+      </nav>
 
       <main>
         

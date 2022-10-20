@@ -1,41 +1,32 @@
 import React from 'react'
-import Typewriter from 'typewriter-effect';
+import { useTranslation } from "react-i18next";
+
 import { Text } from './styles';
+import { useTypewriter } from 'react-simple-typewriter';
 
 export function Greetings(){
+
+  const { t, i18n } = useTranslation()
+
+  const [text, count] = useTypewriter({
+    words: ['web', 'backend', 'mobile', 'Javascript'],
+    loop: 1,
+  })
+
+  const language = i18n.language
+  
+  const emojis = ['💻', '👨‍💻', '📱', '😅']
+
   return (
     <Text>
-      <Typewriter
-        options={{
-          autoStart: true,
-        }}
-        onInit={typewriter => {
-          typewriter
-            .changeDelay(100)
-            .typeString('Hi, my name is s')
-            .pauseFor(200)
-            .deleteChars(1)
-            .typeString('<strong>Stanley</strong>!')
-            .pauseFor(250)
-            .typeString('👋')
-            .pauseFor(500)
-            .changeDelay(50)
-            .typeString('<br/> I am a web developer')
-            .pauseFor(100)
-            .typeString(', backend developer')
-            .pauseFor(50)
-            .changeDelay(60)
-            .typeString(' and mobile develop')
-            .pauseFor(500)
-            .changeDeleteSpeed(1)
-            .deleteChars(51)
-            .typeString('<strong>Javascript</strong> developer')
-            .typeString('!')
-            .pauseFor(500)
-            .typeString('😅')
-            .start();
-        }}
-      />
+      <>
+        {t('greetings.1')} <strong>Stanley</strong>!👋<br />
+        {t('greetings.2')}{' '}
+        {language === 'pt' && 'desenvolvedor'}{' '} 
+        <strong>{text}</strong>{' '} 
+        {language === 'en' && 'developer'}
+        {emojis[Number(count) - 1]} 
+      </>
     </Text>
   )
 }

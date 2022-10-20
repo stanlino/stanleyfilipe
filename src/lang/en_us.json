@@ -1,0 +1,18 @@
+{
+  "greetings": {
+    "1": "Hi, my name is",
+    "2": "I am a"
+  },
+  "github_link": "Browse my personal projects",
+  "linkedin_link": "See a little about me and what i follow",
+  "titles": {
+    "about_me": "About me",
+    "certificates": "Click to see my certificates"
+  },
+  "about_me": {
+    "1": "Computer technician graduated in 2020 at",
+    "2": "Since then I have studied the javascript ecosystem with a focus on the front end. I recently had the opportunity to join",
+    "3": "and consolidate my studies. I'm looking for my first job as a web/mobile developer!",
+    "rocketseat_ignite": "Rocketseat's Ignite training program"
+  }
+}

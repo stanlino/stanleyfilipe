@@ -1,0 +1,18 @@
+{
+  "greetings": {
+    "1": "Oi, me chamo",
+    "2": "Eu sou um"
+  },
+  "github_link": "Navegue entre meus projetos pessoais",
+  "linkedin_link": "Veja um pouco sobre mim e o que eu sigo",
+  "titles": {
+    "about_me": "Sobre mim",
+    "certificates": "Clique para abrir meus certificados"
+  },
+  "about_me": {
+    "1": "Tecnico de informática formado em 2020 no",
+    "2": "Desde então eu estudo o ecossistema javascript com foco em frontend. Recentemente, tive a oportunidade de participar das trilhas do",
+    "3": "e consolidar meus estudos. Eu estou a procura da minha primeira oportunidade como desenvolvedor frontend!",
+    "rocketseat_ignite": "Ignite na Rocketseat"
+  }
+}

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import {
   Container, 
@@ -7,6 +8,9 @@ import {
 } from './styles'
 
 export function About(){
+  
+  const { t } = useTranslation()
+
   return (
     <Container>
       <ImageContainer>
@@ -18,17 +22,20 @@ export function About(){
         />
       </ImageContainer>
       <p>
-        <span>About me</span>
-        Computer technician graduated in 2020 at{' '} 
-        <a href='http://www.ifto.edu.br/' target="_blank" rel="noreferrer">
-          Instituto Federal do Tocantins - Campus Palmas.
-        </a>
-        {' '}Since then I have studied the javascript ecosystem with a focus on the front end.
-        {' '}I recently had the opportunity to join{' '} 
-        <a href='https://lp.rocketseat.com.br/ignite' target="_blank" rel="noreferrer">
-          {"Rocketseat's Ignite"}
-        </a> 
-        {' '}training program and consolidate my studies. {"I'm"} looking for my first job as a web/mobile developer!
+        <>
+          <span>About me</span>
+          {t('about_me.1')}{' '} 
+          <a href='http://www.ifto.edu.br/' target="_blank" rel="noreferrer">
+            Instituto Federal do Tocantins - Campus Palmas.
+          </a>
+          {' '}{t('about_me.2')}{' '} 
+          <a href='https://lp.rocketseat.com.br/ignite' target="_blank" rel="noreferrer">
+            <>
+              {t('about_me.rocketseat_ignite')}
+            </>
+          </a> 
+          {' '}{t('about_me.3')}
+        </>
       </p>
     </Container>
   )

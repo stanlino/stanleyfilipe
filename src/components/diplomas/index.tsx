@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import {
   Ancor,
@@ -20,9 +21,12 @@ function Diploma({ name, link, color }: IDiplomaProps) {
 }
 
 export function Diplomas(){
+
+  const { t } = useTranslation()
+
   return (
     <Container>
-      <h2>Click to see my certificates</h2>
+      <h2><>{t('titles.certificates')}</></h2>
       <div>
         <Diploma name='ReactJS' link='https://app.rocketseat.com.br/certificates/f4584d47-a958-4586-9995-693374666752' color='#61dbfb'/>
         <Diploma name='React Native' link='https://app.rocketseat.com.br/certificates/0e20cc6d-f91c-4e7b-ba2b-704270a3dd5e' color='#318fa7'/>

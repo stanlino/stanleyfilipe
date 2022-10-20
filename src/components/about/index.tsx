@@ -23,7 +23,7 @@ export function About(){
       </ImageContainer>
       <p>
         <>
-          <span>About me</span>
+          <span><>{t('titles.about_me')}</></span>
           {t('about_me.1')}{' '} 
           <a href='http://www.ifto.edu.br/' target="_blank" rel="noreferrer">
             Instituto Federal do Tocantins - Campus Palmas.

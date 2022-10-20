@@ -68,9 +68,10 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   })
 
   return {
+    revalidate: true,
     props: {
       posts
-    }
+    },
   }
 
 }

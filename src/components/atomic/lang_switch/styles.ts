@@ -50,7 +50,7 @@ export const Container = styled.div`
         border-radius: 20px;
         left: 0.3em;
         bottom: 0.3em;
-        background-color: #121212;
+        background-color: #a0a1a3;
         transition: .4s;
       }
     }

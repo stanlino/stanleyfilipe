@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { GetStaticProps } from 'next'
+import { GetServerSideProps } from 'next'
 import { asText } from '@prismicio/helpers'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -46,13 +46,18 @@ export default function Posts({ posts } : PostsProps){
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ previewData }) => {
+export const getServerSideProps: GetServerSideProps = async ({ previewData, query }) => {
 
   const prismic = createClient({ previewData })
 
+  const lang = query.hasOwnProperty('lang') ? String(query.lang) : 'pt-br'
+
   const response = await prismic.getByType('post', {
-    pageSize: 100
+    pageSize: 100,
+    lang
   })
+
+  const notFound = response.results.length < 1
 
   const posts = response.results.map(post => {
     return {
@@ -68,10 +73,10 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   })
 
   return {
-    revalidate: true,
     props: {
       posts
     },
+    notFound
   }
 
 }

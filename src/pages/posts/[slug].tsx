@@ -40,9 +40,19 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
 
   const { slug } = params as any
 
-  const prismic = createClient(req)
+  const prismic = createClient(req) 
 
-  const response = await prismic.getByUID('post', String(slug), {})
+  let response;
+
+  try {
+    response = await prismic.getByUID('post', String(slug), {
+      lang: '*',
+    })
+  } catch (error) {
+    return {
+      notFound: true
+    }
+  }
 
   const post = {
     slug, 

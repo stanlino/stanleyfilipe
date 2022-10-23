@@ -10,9 +10,11 @@ export function LangSwitch(){
 
   const { i18n } = useTranslation()
 
+  const theCurrentLanguageIsEnglish = i18n.language === 'en'
+
   function switchLanguage() {
     i18n.changeLanguage(
-      i18n.language === 'en' ? 'pt' : 'en'
+      theCurrentLanguageIsEnglish ? 'pt' : 'en'
     )
   }
 
@@ -26,7 +28,7 @@ export function LangSwitch(){
       />
 
       <label className="switch">
-        <input onClick={switchLanguage} type="checkbox" />
+        <input checked={!theCurrentLanguageIsEnglish} onClick={switchLanguage} type="checkbox" />
           
         <span className="slider" />
       </label>

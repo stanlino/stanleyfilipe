@@ -28,7 +28,7 @@ export function LangSwitch(){
       />
 
       <label className="switch">
-        <input checked={!theCurrentLanguageIsEnglish} onClick={switchLanguage} type="checkbox" />
+        <input checked={!theCurrentLanguageIsEnglish} onChange={switchLanguage} type="checkbox" />
           
         <span className="slider" />
       </label>

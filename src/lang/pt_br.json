@@ -16,5 +16,10 @@
     "2": "Desde então eu estudo o ecossistema javascript com foco em frontend. Recentemente, tive a oportunidade de participar das trilhas do",
     "3": "e consolidar meus estudos. Eu estou a procura da minha primeira oportunidade como desenvolvedor frontend!",
     "rocketseat_ignite": "Ignite na Rocketseat"
+  },
+  "accessibility": {
+    "EUA_flag": "Bandeira dos Estados Unidos",
+    "BR_flag": "Bandeira do Brasil",
+    "about_me_img": "Eu, um lindo rapaz sorrindo para a câmera"
   }
 }

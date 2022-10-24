@@ -24,20 +24,15 @@ export const Container = styled.div`
       flex-direction: column;
     }
 
-    .all-posts {
+    a {
       flex: 1;
       display: flex;
       flex-direction: column;
-      max-width: 100px;
+      cursor: pointer;
       background-color: rgba(0,0,0,.2);
       border-radius: 8px;
-      border: 1px solid transparent;
-
-      cursor: pointer;
-
-      align-items: center;
-      justify-content: center;
       transition: all .5s;
+      border: 1px solid transparent;
 
       :hover {
         border: 1px solid #0070f3;
@@ -46,45 +41,35 @@ export const Container = styled.div`
           color: #0070f3
         }
       }
+    }
+
+    .post {
+      padding: 12px;
+
+      p {
+        font-weight: 300;
+        margin: 1rem 0;
+      }
+
+      time {
+        align-self: flex-end;
+        font-size: 0.75rem;
+        color: grey;
+      }
+    }
+
+    .all-posts {
+      max-width: 100px;
+
+      align-items: center;
+      justify-content: center;
 
       @media (max-width: 720px) {
         max-width: 100%;
         min-height: 100px;
+        flex-direction: row;
+        gap: 1rem;
       }
-    }
-  }
-`
-
-export const Ancora = styled.a`
-  flex: 1;
-  cursor: pointer;
-  background-color: rgba(0,0,0,.2);
-  padding: 12px;
-  border-radius: 8px;
-
-  display: flex;
-  flex-direction: column;
-
-  border: 1px solid transparent;
-
-  transition: all .5s;
-
-  p {
-    font-weight: 300;
-    margin: 1rem 0;
-  }
-
-  time {
-    align-self: flex-end;
-    font-size: 0.75rem;
-    color: grey;
-  }
-
-  :hover {
-    border: 1px solid #0070f3;
-
-    strong {
-      color: #0070f3
     }
   }
 `

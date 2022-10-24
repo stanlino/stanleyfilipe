@@ -8,7 +8,7 @@ import {
 
 export function LangSwitch(){
 
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   const theCurrentLanguageIsEnglish = i18n.language === 'en'
 
@@ -24,11 +24,16 @@ export function LangSwitch(){
         width={30}
         height={30}
         src='/png/estados-unidos.png'
-        alt='Bandeira do brasil'
+        alt={t('accessibility.EUA_flag')}
       />
 
-      <label className="switch">
-        <input checked={!theCurrentLanguageIsEnglish} onChange={switchLanguage} type="checkbox" />
+      <label aria-label='change page language' className="switch">
+        <input 
+          checked={!theCurrentLanguageIsEnglish} 
+          onChange={switchLanguage} 
+          type="checkbox" 
+          aria-label='change page language'
+        />
           
         <span className="slider" />
       </label>
@@ -37,7 +42,7 @@ export function LangSwitch(){
         width={30}
         height={30}
         src='/png/brazil.png'
-        alt='Bandeira do brasil'
+        alt={t('accessibility.BR_flag')}
       />
     </Container>
   )

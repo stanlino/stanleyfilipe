@@ -17,7 +17,7 @@ export function About(){
         <Image 
           src='/eu.jpg'
           objectFit='contain'
-          alt='Um lindo rapaz sorrindo para a câmera' 
+          alt={t('accessibility.about_me_img')} 
           layout='fill'
         />
       </ImageContainer>

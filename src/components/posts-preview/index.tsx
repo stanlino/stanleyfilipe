@@ -3,7 +3,6 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import {
-  Ancora,
   Container
 } from './styles'
 
@@ -34,11 +33,11 @@ export function PostsPreview({ posts }: PostsPreviewProps){
       <div className='posts'>
         {posts.map(post => (
           <Link href={`posts/${post.slug}`} key={post.slug}>
-            <Ancora className='post'>
+            <a className='post'>
               <strong>{post.title}</strong>
               <p>{post.excerpt}</p>
               <time>{post.updatedAt}</time>
-            </Ancora>
+            </a>
           </Link>
         ))}
         <Link href={`/posts?lang=${currentLang}`}>

@@ -24,5 +24,10 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    gap: 2rem;
   }
 `

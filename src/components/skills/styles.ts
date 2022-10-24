@@ -5,7 +5,6 @@ export const Container = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
-  margin: 2rem;
   width: 100%;
 
   strong {
@@ -26,5 +25,10 @@ export const Container = styled.div`
     margin: 8px;
     width: 2.25rem;
     height: 2.25rem;
+
+    @media (max-width: 720px) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
   }
 `

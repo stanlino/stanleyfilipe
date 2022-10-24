@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetServerSideProps } from 'next'
 import Head from 'next/head'
 
 import { Container } from './home.styles'
@@ -9,9 +9,32 @@ import { Skills } from '../components/skills'
 import { About } from '../components/about'
 import { Diplomas } from '../components/diplomas'
 import { LangSwitch } from '../components/atomic/lang_switch'
+import { PostsPreview } from '../components/posts-preview'
+import { useTranslation } from 'react-i18next'
+import { getFormattedPosts } from '../services/prismic'
 
-const Home: NextPage = () => {
-  return (
+type Post = {
+  slug: string
+  title: string
+  excerpt: string
+  updatedAt: string
+  lang: string
+}
+
+interface HomePageProps {
+  postsInPortuguese: Post[]
+  postsInEnglish: Post[]
+}
+
+export default function Home({ postsInEnglish, postsInPortuguese }: HomePageProps) {
+
+  const { i18n } = useTranslation()
+
+  const currentLang = i18n.language
+
+  const posts = currentLang === 'en' ? postsInEnglish : postsInPortuguese
+  
+  return ( 
     <Container>
       <Head>
         <title>Stanley Filipe</title>
@@ -29,9 +52,11 @@ const Home: NextPage = () => {
 
         <Skills />
 
-        <Redirects />
+        <PostsPreview posts={posts} />
 
         <About />
+
+        <Redirects />
         
         <Diplomas />
 
@@ -40,4 +65,16 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export const getServerSideProps: GetServerSideProps = async ({ previewData }) => {
+
+  const { posts: postsInPortuguese } = await getFormattedPosts(previewData, { lang: 'pt', pageSize: 3 })
+  const { posts: postsInEnglish } = await getFormattedPosts(previewData, { lang: 'en', pageSize: 3 })
+
+  return {
+    props: {
+      postsInPortuguese,
+      postsInEnglish
+    },
+  }
+
+}

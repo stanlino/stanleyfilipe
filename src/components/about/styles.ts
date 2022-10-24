@@ -8,8 +8,6 @@ export const Container = styled.article`
   
   justify-content: center;
 
-  margin: 6rem 0;
-
   h3 {
     margin-bottom: 1rem;
   }
@@ -41,8 +39,6 @@ export const Container = styled.article`
   @media (max-width: 720px) {
     flex-direction: column-reverse;
     gap: 2rem;
-
-    margin: 2rem 0;
   }
 
 `

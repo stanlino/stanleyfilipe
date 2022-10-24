@@ -5,7 +5,9 @@
   },
   "github_link": "Navegue entre meus projetos pessoais",
   "linkedin_link": "Veja um pouco sobre mim e o que eu sigo",
+  "see_all_posts_link": "Ver todos",
   "titles": {
+    "lasted_posts": "Ultimas postagens",
     "about_me": "Sobre mim",
     "certificates": "Clique para abrir meus certificados"
   },

@@ -5,7 +5,9 @@
   },
   "github_link": "Browse my personal projects",
   "linkedin_link": "See a little about me and what i follow",
+  "see_all_posts_link": "See it all",
   "titles": {
+    "lasted_posts": "Latest posts",
     "about_me": "About me",
     "certificates": "Click to see my certificates"
   },

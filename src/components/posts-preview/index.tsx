@@ -20,13 +20,17 @@ interface PostsPreviewProps {
 
 export function PostsPreview({ posts }: PostsPreviewProps){
 
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   const currentLang = i18n.language
 
   return (
     <Container>
-      <span>Latest posts</span>
+      <span>
+        <>
+          {t('titles.lasted_posts')}
+        </>
+      </span>
       <div className='posts'>
         {posts.map(post => (
           <Link href={`posts/${post.slug}`} key={post.slug}>
@@ -39,7 +43,11 @@ export function PostsPreview({ posts }: PostsPreviewProps){
         ))}
         <Link href={`/posts?lang=${currentLang}`}>
           <a className='all-posts'>
-            <strong>See it all</strong>
+            <strong>
+              <>
+                {t('see_all_posts_link')}
+              </>
+            </strong>
             <strong>&rarr;</strong>
           </a>
         </Link>

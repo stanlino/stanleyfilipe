@@ -1,4 +1,4 @@
-import type { GetServerSideProps } from 'next'
+import type { GetStaticProps } from 'next'
 import Head from 'next/head'
 
 import { Container } from './home.styles'
@@ -65,7 +65,7 @@ export default function Home({ postsInEnglish, postsInPortuguese }: HomePageProp
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ previewData }) => {
+export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
   const { posts: postsInPortuguese } = await getFormattedPosts(previewData, { lang: 'pt', pageSize: 3 })
   const { posts: postsInEnglish } = await getFormattedPosts(previewData, { lang: 'en', pageSize: 3 })
@@ -75,6 +75,7 @@ export const getServerSideProps: GetServerSideProps = async ({ previewData }) =>
       postsInPortuguese,
       postsInEnglish
     },
+    revalidate: 60 * 60 // 1 hour in secconds
   }
 
 }

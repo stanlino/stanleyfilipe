@@ -14,6 +14,13 @@ export const Main = styled.main`
       font-weight: 700;
     }
 
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 1rem 0;
+      color: #ddd;
+    }
+
     time {
       font-size: 1rem;
       color: #A8A8B3;
@@ -31,14 +38,40 @@ export const Main = styled.main`
       align-items: center;
 
       p {
-        margin: 1.5rem 0;
+        margin: 1rem 0;
         text-align: left;
         width: 100%;
+        font-weight: 100;
+        font-size: 1rem;
+      }
+
+      strong {
+        color: #e67224;
+        font-size: 1rem;
       }
 
       img {
         height: 200px;
         width: 100%;
+      }
+
+      pre {
+        padding: 1rem;
+        border-radius: 8px;
+        background: rgba(0,0,0,.5);
+        width: 100%;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-size: 15px;
+
+      }
+
+      a {
+        color: rgb(98, 98, 230);
+        
+        :hover {
+          text-decoration: underline;
+        }
       }
     }
 

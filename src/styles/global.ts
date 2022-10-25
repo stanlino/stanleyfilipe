@@ -10,8 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'Inter', sans-serif;
     
     color: #f2f2f2;
     background: #121212;

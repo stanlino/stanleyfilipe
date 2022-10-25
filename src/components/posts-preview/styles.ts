@@ -45,6 +45,9 @@ export const Container = styled.div`
 
     .post {
       padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       p {
         font-weight: 300;
@@ -66,7 +69,7 @@ export const Container = styled.div`
 
       @media (max-width: 720px) {
         max-width: 100%;
-        min-height: 100px;
+        min-height: 50px;
         flex-direction: row;
         gap: 1rem;
       }

@@ -1,20 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { IPostPreview } from '../../dtos/PostPreview'
 
 import {
   Container
 } from './styles'
 
-type Post = {
-  slug: string
-  title: string
-  excerpt: string
-  updatedAt: string
-}
-
 interface PostsPreviewProps {
-  posts: Post[]
+  posts: IPostPreview[]
 }
 
 export function PostsPreview({ posts }: PostsPreviewProps){
@@ -36,7 +30,7 @@ export function PostsPreview({ posts }: PostsPreviewProps){
             <a className='post'>
               <strong>{post.title}</strong>
               <p>{post.excerpt}</p>
-              <time>{post.updatedAt}</time>
+              <time>{post.createdAt}</time>
             </a>
           </Link>
         ))}

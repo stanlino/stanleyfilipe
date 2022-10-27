@@ -12,18 +12,11 @@ import { LangSwitch } from '../components/atomic/lang_switch'
 import { PostsPreview } from '../components/posts-preview'
 import { useTranslation } from 'react-i18next'
 import { getPostsPreview } from '../services/prismic'
-
-type Post = {
-  slug: string
-  title: string
-  excerpt: string
-  updatedAt: string
-  lang: string
-}
+import { IPostPreview } from '../dtos/PostPreview'
 
 interface HomePageProps {
-  postsInPortuguese: Post[]
-  postsInEnglish: Post[]
+  postsInPortuguese: IPostPreview[]
+  postsInEnglish: IPostPreview[]
 }
 
 export default function Home({ postsInEnglish, postsInPortuguese }: HomePageProps) {

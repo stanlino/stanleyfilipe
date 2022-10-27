@@ -51,7 +51,14 @@ export default function Home({ posts }: HomePageProps) {
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
-  const { posts } = await getPostsPreview(previewData, { pageSize: 3 })
+  const { posts } = await getPostsPreview(previewData, { 
+    pageSize: 3, 
+    orderings: {
+      field: 'document.first_publication_date',
+      direction: 'desc'
+    },
+    lang: 'pt-br'
+  })
 
   return {
     props: {

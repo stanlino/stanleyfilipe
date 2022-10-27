@@ -32,7 +32,7 @@ export default function Post({ post } : PostProps){
           <PostContent dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
         <footer>
-          <time>{post.updatedAt}</time>
+          <time>Atualizado em {post.updatedAt}</time>
           <span>{post.author}</span>
         </footer>
       </Main>

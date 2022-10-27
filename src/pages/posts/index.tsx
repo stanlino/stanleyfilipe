@@ -41,7 +41,14 @@ export default function Posts({ posts } : PostsProps){
 
 export const getServerSideProps: GetServerSideProps = async ({ previewData }) => {
 
-  const { posts, notFound } = await getPostsPreview(previewData, { pageSize: 100 })  
+  const { posts, notFound } = await getPostsPreview(previewData, { 
+    pageSize: 100,
+    orderings: {
+      field: 'document.first_publication_date',
+      direction: 'desc'
+    },
+    lang: 'pt-br'
+  })  
 
   return {
     props: {

@@ -1,9 +1,9 @@
 import { BuildQueryURLArgs } from "@prismicio/client"
 import { PreviewData } from "next"
 import { createClient } from "../../prismicio"
-import { postFormatter } from "../utils/postFormatter"
+import { postPreviewFormatter } from "../utils/postFormatter"
 
-export async function getFormattedPosts(previewData: PreviewData, params: Partial<BuildQueryURLArgs>) {
+export async function getPostsPreview(previewData: PreviewData, params: Partial<BuildQueryURLArgs>) {
   const prismic = createClient({ previewData })
 
   const response = await prismic.getByType('post', params)
@@ -17,7 +17,7 @@ export async function getFormattedPosts(previewData: PreviewData, params: Partia
     }
   }
 
-  const posts = response.results.map(postFormatter)
+  const posts = response.results.map(postPreviewFormatter)
 
   return {
     notFound: false,

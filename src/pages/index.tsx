@@ -11,7 +11,7 @@ import { Diplomas } from '../components/diplomas'
 import { LangSwitch } from '../components/atomic/lang_switch'
 import { PostsPreview } from '../components/posts-preview'
 import { useTranslation } from 'react-i18next'
-import { getFormattedPosts } from '../services/prismic'
+import { getPostsPreview } from '../services/prismic'
 
 type Post = {
   slug: string
@@ -67,8 +67,8 @@ export default function Home({ postsInEnglish, postsInPortuguese }: HomePageProp
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
-  const { posts: postsInPortuguese } = await getFormattedPosts(previewData, { lang: 'pt', pageSize: 3 })
-  const { posts: postsInEnglish } = await getFormattedPosts(previewData, { lang: 'en', pageSize: 3 })
+  const { posts: postsInPortuguese } = await getPostsPreview(previewData, { lang: 'pt', pageSize: 3 })
+  const { posts: postsInEnglish } = await getPostsPreview(previewData, { lang: 'en', pageSize: 3 })
 
   return {
     props: {

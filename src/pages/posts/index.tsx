@@ -1,26 +1,18 @@
 import React from 'react'
 
 import { GetServerSideProps } from 'next'
-import { asText } from '@prismicio/helpers'
 import Head from 'next/head'
 import Link from 'next/link'
 
-import { createClient } from '../../../prismicio'
+import { getPostsPreview } from '../../services/prismic'
+import { IPostPreview } from '../../dtos/PostPreview'
 
 import {
   Main
 } from './posts.styles'
-import { getFormattedPosts } from '../../services/prismic'
-
-type Post = {
-  slug: string
-  title: string
-  excerpt: string
-  updatedAt: string
-}
 
 interface PostsProps {
-  posts: Post[]
+  posts: IPostPreview[]
 }
 
 export default function Posts({ posts } : PostsProps){
@@ -35,7 +27,7 @@ export default function Posts({ posts } : PostsProps){
           { posts.map(post => (
             <Link href={`posts/${post.slug}`} key={post.slug}>
               <a>
-                <time>{post.updatedAt}</time>
+                <time>{post.createdAt}</time>
                 <strong>{post.title}</strong>
                 <p>{post.excerpt}</p>
               </a>
@@ -51,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async ({ previewData, quer
 
   const lang = query.hasOwnProperty('lang') ? String(query.lang) : 'pt'
 
-  const { posts, notFound } = await getFormattedPosts(previewData, { lang, pageSize: 100 })  
+  const { posts, notFound } = await getPostsPreview(previewData, { lang, pageSize: 100 })  
 
   return {
     props: {

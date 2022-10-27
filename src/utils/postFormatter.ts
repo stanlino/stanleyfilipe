@@ -1,21 +1,21 @@
-import { asText } from "@prismicio/helpers";
+import { asHTML, asText } from "@prismicio/helpers";
 import { PrismicDocument } from "@prismicio/types";
 
-export function postPreviewFormatter(post: PrismicDocument) {
+export function postFormatter(post: PrismicDocument) {
   return {
-    slug: post.uid,
     title: asText(post.data.title),
-    excerpt: post.data.content.find((content: { type: string }) => content.type === 'paragraph')?.text ?? '',
-    updatedAt: new Date(post.last_publication_date).toLocaleDateString(post.lang, {
+    author: post.data.author,
+    subtitle: post.data.subtitle,
+    content: asHTML(post.data.content),
+    createdAt: new Date(post.first_publication_date).toLocaleDateString('pt-BR', {
       day: '2-digit',
       month: 'long',
       year: 'numeric'
     }),
-    createdAt: new Date(post.first_publication_date).toLocaleDateString(post.lang, {
+    updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
       day: '2-digit',
       month: 'long',
       year: 'numeric'
-    }),
-    lang: post.lang
+    })
   }
 }

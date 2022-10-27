@@ -13,9 +13,7 @@ interface PostsPreviewProps {
 
 export function PostsPreview({ posts }: PostsPreviewProps){
 
-  const { i18n, t } = useTranslation()
-
-  const currentLang = i18n.language
+  const { t } = useTranslation()
 
   return (
     <Container>
@@ -34,7 +32,7 @@ export function PostsPreview({ posts }: PostsPreviewProps){
             </a>
           </Link>
         ))}
-        <Link href={`/posts?lang=${currentLang}`}>
+        <Link href={`/posts`}>
           <a className='all-posts'>
             <strong>
               <>

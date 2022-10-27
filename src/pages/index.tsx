@@ -10,23 +10,14 @@ import { About } from '../components/about'
 import { Diplomas } from '../components/diplomas'
 import { LangSwitch } from '../components/atomic/lang_switch'
 import { PostsPreview } from '../components/posts-preview'
-import { useTranslation } from 'react-i18next'
 import { getPostsPreview } from '../services/prismic'
 import { IPostPreview } from '../dtos/PostPreview'
 
 interface HomePageProps {
-  postsInPortuguese: IPostPreview[]
-  postsInEnglish: IPostPreview[]
+  posts: IPostPreview[]
 }
 
-export default function Home({ postsInEnglish, postsInPortuguese }: HomePageProps) {
-
-  const { i18n } = useTranslation()
-
-  const currentLang = i18n.language
-
-  const posts = currentLang === 'en' ? postsInEnglish : postsInPortuguese
-  
+export default function Home({ posts }: HomePageProps) {  
   return ( 
     <Container>
       <Head>
@@ -60,13 +51,11 @@ export default function Home({ postsInEnglish, postsInPortuguese }: HomePageProp
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
-  const { posts: postsInPortuguese } = await getPostsPreview(previewData, { lang: 'pt', pageSize: 3 })
-  const { posts: postsInEnglish } = await getPostsPreview(previewData, { lang: 'en', pageSize: 3 })
+  const { posts } = await getPostsPreview(previewData, { pageSize: 3 })
 
   return {
     props: {
-      postsInPortuguese,
-      postsInEnglish
+      posts
     },
     revalidate: 60 * 60 // 1 hour in secconds
   }

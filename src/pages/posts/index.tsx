@@ -19,7 +19,7 @@ export default function Posts({ posts } : PostsProps){
   return (
     <>
       <Head>
-        <title>Artigos</title>
+        <title>Posts</title>
       </Head>
 
       <Main>
@@ -39,11 +39,9 @@ export default function Posts({ posts } : PostsProps){
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ previewData, query }) => {
+export const getServerSideProps: GetServerSideProps = async ({ previewData }) => {
 
-  const lang = query.hasOwnProperty('lang') ? String(query.lang) : 'pt'
-
-  const { posts, notFound } = await getPostsPreview(previewData, { lang, pageSize: 100 })  
+  const { posts, notFound } = await getPostsPreview(previewData, { pageSize: 100 })  
 
   return {
     props: {

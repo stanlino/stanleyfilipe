@@ -5,7 +5,8 @@ import { IPost } from '../../dtos/Post'
 import { getPostsByUID } from '../../services/prismic'
 
 import {
-  Main
+  Main, 
+  PostContent
 } from './post.styles'
 
 interface PostProps {
@@ -25,8 +26,12 @@ export default function Post({ post } : PostProps){
           <h1>{post.title}</h1>
           <h2>{post.subtitle}</h2>
           <time>{post.createdAt}</time>
-          <div className='post-content' dangerouslySetInnerHTML={{ __html: post.content }} />
+          <PostContent dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
+        <footer>
+          <time>{post.updatedAt}</time>
+          <span>{post.author}</span>
+        </footer>
       </Main>
     </>
   )

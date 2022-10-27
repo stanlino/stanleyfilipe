@@ -20,6 +20,9 @@ export default function Post({ post } : PostProps){
         <title>
           {post.title}
         </title>
+        <meta name="description" content={post.subtitle} />
+        <meta name="author" content={post.author} />
+        <meta name="keywords" content={post.tags} />
       </Head>
       <Main>
         <article>

@@ -6,4 +6,5 @@ export interface IPost {
   createdAt: string
   subtitle: string
   author: string
+  tags: string
 }

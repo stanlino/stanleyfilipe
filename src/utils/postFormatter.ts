@@ -3,6 +3,7 @@ import { PrismicDocument } from "@prismicio/types";
 
 export function postFormatter(post: PrismicDocument) {
   return {
+    tags: post.tags,
     title: asText(post.data.title),
     author: post.data.author,
     subtitle: post.data.subtitle,

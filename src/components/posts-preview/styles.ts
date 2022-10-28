@@ -8,9 +8,14 @@ export const Container = styled.div`
     margin: 0;
   }
 
-  span {
+  h2 {
     font-size: 1.25rem;
     font-weight: 100;
+
+    @media (max-width: 720px) {
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 
   .posts {
@@ -30,7 +35,6 @@ export const Container = styled.div`
       flex-direction: column;
       cursor: pointer;
       background-color: rgba(0,0,0,.2);
-      border-radius: 8px;
       transition: all .5s;
       border: 1px solid transparent;
 

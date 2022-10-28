@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { Container } from './home.styles'
 
 import { Greetings } from '../components/greetings'
-import { Redirects } from '../components/redirects'
 import { Skills } from '../components/skills'
 import { About } from '../components/about'
 import { Diplomas } from '../components/diplomas'
@@ -39,8 +38,6 @@ export default function Home({ posts }: HomePageProps) {
         <PostsPreview posts={posts} />
 
         <About />
-
-        <Redirects />
         
         <Diplomas />
 

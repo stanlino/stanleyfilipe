@@ -17,11 +17,11 @@ export function PostsPreview({ posts }: PostsPreviewProps){
 
   return (
     <Container>
-      <span>
+      <h2>
         <>
           {t('titles.lasted_posts')}
         </>
-      </span>
+      </h2>
       <div className='posts'>
         {posts.map(post => (
           <Link href={`posts/${post.slug}`} key={post.slug}>

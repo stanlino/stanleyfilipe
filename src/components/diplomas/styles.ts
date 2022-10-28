@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +40,11 @@ export const Ancor = styled.a<IAncorProps>`
   align-items: center;
   justify-content: center;
 
-  border-radius: 8px;
+  border-radius: 4px;
+
+  @media (max-width: 720px) {
+    width: 100%;
+  }
 
   span {
     font-size: 1.5rem;

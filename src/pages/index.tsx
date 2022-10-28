@@ -11,6 +11,7 @@ import { LangSwitch } from '../components/atomic/lang_switch'
 import { PostsPreview } from '../components/posts-preview'
 import { getPostsPreview } from '../services/prismic'
 import { IPostPreview } from '../dtos/PostPreview'
+import { Footer } from '../components/footer'
 
 interface HomePageProps {
   posts: IPostPreview[]
@@ -42,6 +43,9 @@ export default function Home({ posts }: HomePageProps) {
         <Diplomas />
 
       </main>
+
+      <Footer />
+      
     </Container>
   )
 }

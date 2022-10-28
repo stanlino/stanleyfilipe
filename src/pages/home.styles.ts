@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 0 2rem;
-
   nav {
+    padding: 0 2rem;
+    
     margin: 1rem 0 0 0;
 
     display: flex;
@@ -18,7 +18,7 @@ export const Container = styled.div`
 
   main {
     min-height: 100vh;
-    padding: 2rem 0;
+    padding: 2rem;
     flex: 1;
     display: flex;
     flex-direction: column;

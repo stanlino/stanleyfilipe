@@ -9,7 +9,8 @@
   "titles": {
     "lasted_posts": "Latest posts (only in portuguese)",
     "about_me": "About me",
-    "certificates": "Click to see my certificates"
+    "certificates": "Click to see my certificates",
+    "last_update_on": "Last update on"
   },
   "about_me": {
     "1": "Computer technician graduated in 2020 at",

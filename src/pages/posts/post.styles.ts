@@ -78,14 +78,11 @@ export const PostContent = styled.div`
   img {
     height: 200px;
     width: 100%;
-    
     background-color: rgba(0,0,0,0.5);
-    border-radius: 8px;
   }
 
   pre {
     padding: 1rem;
-    border-radius: 8px;
     background: rgba(0,0,0,.5);
     width: 100%;
     white-space: pre-wrap;
@@ -94,10 +91,16 @@ export const PostContent = styled.div`
   }
 
   a {
-    color: rgb(98, 98, 230);
+    color: #0070f3;
     
     :hover {
       text-decoration: underline;
     }
+  }
+
+  ul {
+    align-self: flex-start;
+
+    list-style: none;
   }
 `

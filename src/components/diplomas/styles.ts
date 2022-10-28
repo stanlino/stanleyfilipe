@@ -1,34 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-
-  width: 100%;
-
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  gap: 2rem;
-
-  h2 {
-    text-align: center;
-  }
-
-  div {
-    width: 100%;
-
-    display: flex;
-    flex-direction: row;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 2rem;
-
-    @media (max-width: 720px) {
-      flex-direction: column;
-    }
-  }
+  flex: 1;
+  gap: 1rem;
+  padding-left: 8px;
 `
 
 interface IAncorProps {
@@ -36,19 +13,14 @@ interface IAncorProps {
 }
 
 export const Ancor = styled.a<IAncorProps>`
-  width: 200px;
-  height: 100px;
   background-color: ${({ color }) => color};
 
   display: flex;
   align-items: center;
   justify-content: center;
-
+  flex: 1;
   border-radius: 4px;
-
-  @media (max-width: 720px) {
-    width: 100%;
-  }
+  min-height: 80px;
 
   span {
     font-size: 1.5rem;

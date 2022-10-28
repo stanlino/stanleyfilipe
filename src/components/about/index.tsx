@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Translate } from '../atomic/Text'
+import { Diplomas } from '../diplomas'
 
 import {
   Container, 
@@ -55,6 +56,7 @@ export function About(){
           </a>
         </Links>
       </div>
+      <Diplomas />
     </Container>
   )
 }

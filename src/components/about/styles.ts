@@ -4,12 +4,9 @@ export const Container = styled.article`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
-  padding: 2rem 0;
 
   @media (max-width: 720px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 2rem;
   }
 
@@ -17,15 +14,16 @@ export const Container = styled.article`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0;
 
-    @media (min-width: 720px) {
-      padding: 0 16px;
-      max-width: 500px;
-    }
+    flex: 2;
+    padding: 0 16px;
 
     h3 {
       margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 720px) {
+      padding: 0;
     }
   }
 `

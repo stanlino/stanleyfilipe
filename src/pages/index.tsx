@@ -6,7 +6,6 @@ import { Container } from './home.styles'
 import { Greetings } from '../components/greetings'
 import { Skills } from '../components/skills'
 import { About } from '../components/about'
-import { Diplomas } from '../components/diplomas'
 import { LangSwitch } from '../components/atomic/lang_switch'
 import { PostsPreview } from '../components/posts-preview'
 import { getPostsPreview } from '../services/prismic'
@@ -39,8 +38,6 @@ export default function Home({ posts }: HomePageProps) {
         <PostsPreview posts={posts} />
 
         <About />
-        
-        <Diplomas />
 
       </main>
 

@@ -38,6 +38,10 @@ export const Container = styled.div`
       transition: all .5s;
       border: 1px solid transparent;
 
+      strong {
+        transition: all .5s;
+      }
+
       :hover {
         border: 1px solid #0070f3;
 
@@ -51,11 +55,11 @@ export const Container = styled.div`
       padding: 12px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
 
       p {
         font-weight: 300;
         margin: 1rem 0;
+        flex: 1;
       }
 
       time {

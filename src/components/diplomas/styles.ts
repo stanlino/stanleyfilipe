@@ -10,6 +10,10 @@ export const Container = styled.div`
 
   gap: 2rem;
 
+  h2 {
+    text-align: center;
+  }
+
   div {
     width: 100%;
 

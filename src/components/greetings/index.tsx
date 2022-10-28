@@ -22,10 +22,10 @@ export function Greetings(){
       <>
         {t('greetings.1')} <strong>Stanley</strong>!👋<br />
         {t('greetings.2')}{' '}
-        {language === 'pt' && 'desenvolvedor'}{' '} 
-        <strong>{text}</strong>{' '} 
-        {language === 'en' && 'developer'}
-        {emojis[Number(count) - 1]} 
+        {language === 'pt' && 'desenvolvedor '}
+        <strong>{text}</strong> 
+        {language === 'en' && ' developer'}
+        {` ${emojis[Number(count) - 1]}`} 
       </>
     </Text>
   )

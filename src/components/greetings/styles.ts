@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Text = styled.h1`
   line-height: 2rem;
-  font-size: 1.60rem;
+  font-size: 1.5rem;
   text-align: center;
   width: 100%;
 

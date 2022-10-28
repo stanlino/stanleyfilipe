@@ -19,6 +19,10 @@ export const Container = styled.div`
     margin: 2rem 0;
     flex-wrap: wrap;
     justify-content: center;
+
+    @media (max-width: 720px) {
+      margin: 0;
+    }
   }
 
   .image_container {

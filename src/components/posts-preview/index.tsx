@@ -24,23 +24,19 @@ export function PostsPreview({ posts }: PostsPreviewProps){
       </h2>
       <div className='posts'>
         {posts.map(post => (
-          <Link href={`posts/${post.slug}`} key={post.slug}>
-            <a className='post'>
-              <strong>{post.title}</strong>
-              <p>{post.excerpt}</p>
-              <time>{post.createdAt}</time>
-            </a>
+          <Link href={`posts/${post.slug}`} className='post' key={post.slug}>
+            <strong>{post.title}</strong>
+            <p>{post.excerpt}</p>
+            <time>{post.createdAt}</time>
           </Link>
         ))}
-        <Link href={`/posts`}>
-          <a className='all-posts'>
-            <strong>
-              <>
-                {t('see_all_posts_link')}
-              </>
-            </strong>
-            <strong>&rarr;</strong>
-          </a>
+        <Link href={`/posts`} className='all-posts'>
+          <strong>
+            <>
+              {t('see_all_posts_link')}
+            </>
+          </strong>
+          <strong>&rarr;</strong>
         </Link>
       </div>
     </Container>

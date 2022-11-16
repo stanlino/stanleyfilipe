@@ -15,10 +15,8 @@ export function Skills(){
               src={`${IMAGES_API}${stack.img_end_point}`} 
               alt={`logo do ${stack.name}`} 
               title={stack.name}
-              width={50}
-              height={50}
-              objectFit='contain'
-              layout='responsive'
+              fill
+              sizes='(max-width: 768px) 100vw, 50vw'
             />
           </div>
         ))} 

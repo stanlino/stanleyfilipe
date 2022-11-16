@@ -21,9 +21,9 @@ export function About(){
       <ImageContainer>
         <Image 
           src='/eu.jpg'
-          objectFit='contain'
           alt={t('accessibility.about_me_img')} 
-          layout='fill'
+          fill
+          sizes='(max-width: 768px) 100vw, 50vw'
         />
       </ImageContainer>
       <div className='about'>

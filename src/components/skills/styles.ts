@@ -30,6 +30,8 @@ export const Container = styled.div`
     width: 2.25rem;
     height: 2.25rem;
 
+    position: relative;
+
     @media (max-width: 720px) {
       width: 1.6rem;
       height: 1.6rem;

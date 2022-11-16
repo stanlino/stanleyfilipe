@@ -3,11 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
 
   margin: 0;
-
-  @media (max-width: 720px) {
-    margin: 0;
-  }
-
+  
   h2 {
     font-size: 1.25rem;
     font-weight: 100;

@@ -10,7 +10,8 @@
     "lasted_posts": "Latest posts (only in portuguese)",
     "about_me": "About me",
     "certificates": "Certificates",
-    "last_update_on": "Last update on"
+    "last_update_on": "Last update on",
+    "projects": "My personal projects"
   },
   "about_me": {
     "1": "Computer technician graduated in 2020 at",
@@ -22,5 +23,8 @@
     "EUA_flag": "United states's flag",
     "BR_flag": "Brazil's flag",
     "about_me_img": "Me, a handsome boy smiling at the camera"
+  },
+  "buttons": {
+    "open": "Click to open in a new tab"
   }
 }

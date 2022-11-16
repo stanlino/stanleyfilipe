@@ -11,6 +11,7 @@ import { PostsPreview } from '../components/posts-preview'
 import { getPostsPreview } from '../services/prismic'
 import { IPostPreview } from '../dtos/PostPreview'
 import { Footer } from '../components/footer'
+import { Projects } from '../components/projects'
 
 interface HomePageProps {
   posts: IPostPreview[]
@@ -36,6 +37,8 @@ export default function Home({ posts }: HomePageProps) {
         <Skills />
 
         <PostsPreview posts={posts} />
+
+        <Projects />
 
         <About />
 

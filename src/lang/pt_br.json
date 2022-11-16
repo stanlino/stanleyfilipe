@@ -10,7 +10,8 @@
     "lasted_posts": "Últimas postagens",
     "about_me": "Sobre mim",
     "certificates": "Certificados",
-    "last_update_on": "Última atualização em"
+    "last_update_on": "Última atualização em",
+    "projects": "Meus projetos pessoais"
   },
   "about_me": {
     "1": "Tecnico de informática formado em 2020 no",
@@ -22,5 +23,8 @@
     "EUA_flag": "Bandeira dos Estados Unidos",
     "BR_flag": "Bandeira do Brasil",
     "about_me_img": "Eu, um lindo rapaz sorrindo para a câmera"
+  },
+  "buttons": {
+    "open": "Clique para abrir em uma nova aba"
   }
 }

@@ -60,28 +60,28 @@ export const Container = styled.div`
         position: absolute;
         z-index: 2;
 
-        display: none;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
+        transition: all 0.5s;
+        color: transparent;
+
         strong {
           font-size: 1.25rem;
           font-weight: 100;
-          color: #fff;
         }
 
         p {
           font-size: 0.75rem;
           font-weight: 100;
-          color: #fff;
           margin: 0.5rem 0;
         }
 
         span {
           font-size: 0.75rem;
           font-weight: 100;
-          color: #fff;
           
         }
 
@@ -98,11 +98,10 @@ export const Container = styled.div`
           span {
             font-size: 0.75rem;
             font-weight: 100;
-            color: #fff;
             
             padding: 0.25rem;
             border-radius: 0.25rem;
-            border: 1px solid #fff;            
+            border: 1px solid transparent;
           }
         }
       }
@@ -110,11 +109,17 @@ export const Container = styled.div`
       :hover {
         img {
           transform: scale(1.1);
-          filter: blur(1px) brightness(0.2);
+          filter: blur(5px) brightness(0.2);
         }
 
         .info {
-          display: flex;
+          color: #fff;
+
+          .techs {
+            span {
+              border: 1px solid #fff;            
+            }
+          }
         }
       }
 
@@ -128,8 +133,14 @@ export const Container = styled.div`
         }
 
         .info {
-          display: flex;
+          color: #fff;
           gap: 0.5rem;
+
+          .techs {
+            span {
+              border: 1px solid #fff;            
+            }
+          }
         }
 
       }

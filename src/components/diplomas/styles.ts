@@ -13,7 +13,9 @@ interface IAncorProps {
 }
 
 export const Ancor = styled.a<IAncorProps>`
-  background-color: ${({ color }) => color};
+  border-color: ${({ color }) => color};
+  border-style: solid;
+  border-width: 1px;
 
   display: flex;
   align-items: center;
@@ -22,15 +24,26 @@ export const Ancor = styled.a<IAncorProps>`
   border-radius: 4px;
   min-height: 80px;
 
-  span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    transition: all .2s;
+  transition: all 0.2s;
+
+  img {
+    margin: 0 1rem;
   }
 
-  :hover {
+  span {
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: all .2s;
+    flex: 1;
+    text-align: left;
+  }
+
+  &:hover {
     span {
-      transform: scale(1.1);
+      color: ${({ color }) => color};
+      filter: brightness(1.2);
     }
+
+    filter: brightness(1.2);
   }
 `

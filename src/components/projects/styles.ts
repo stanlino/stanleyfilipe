@@ -58,7 +58,7 @@ export const Container = styled.div`
 
       .info {
         position: absolute;
-        z-index: 2;
+        z-index: 0;
 
         display: flex;
         flex-direction: column;
@@ -66,7 +66,7 @@ export const Container = styled.div`
         justify-content: center;
 
         transition: all 0.5s;
-        color: transparent;
+        color: white;
 
         strong {
           font-size: 1.25rem;
@@ -101,7 +101,7 @@ export const Container = styled.div`
             
             padding: 0.25rem;
             border-radius: 0.25rem;
-            border: 1px solid transparent;
+            border: 1px solid #fff;
           }
         }
       }
@@ -113,36 +113,12 @@ export const Container = styled.div`
         }
 
         .info {
-          color: #fff;
-
-          .techs {
-            span {
-              border: 1px solid #fff;            
-            }
-          }
+          z-index: 2;
         }
       }
 
       @media (max-width: 720px) {
         max-width: 100%;
-        aspect-ratio: 16/12;
-
-        img {
-          transform: scale(1.1);
-          filter: blur(20px) brightness(0.5);
-        }
-
-        .info {
-          color: #fff;
-          gap: 0.5rem;
-
-          .techs {
-            span {
-              border: 1px solid #fff;            
-            }
-          }
-        }
-
       }
     }
 
